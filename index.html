@@ -1,11 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bright Future School</title>
+    <meta name="description" content="A modern and professional school website for Bright Future School." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Hello World</h1>
+    <header class="hero">
+        <nav class="navbar">
+            <a href="#home" class="brand">Bright Future School</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content" id="home">
+            <div class="hero-text">
+                <p class="eyebrow">Shaping Bright Minds for a Better Tomorrow</p>
+                <h1>Excellence in Education, Character, and Innovation.</h1>
+                <p class="hero-description">We provide a nurturing environment where students grow academically, socially, and creatively through modern learning and strong values.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Enroll Now</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="stats">
+                    <div>
+                        <strong>1,200+</strong>
+                        <span>Students</span>
+                    </div>
+                    <div>
+                        <strong>40+</strong>
+                        <span>Experienced Teachers</span>
+                    </div>
+                    <div>
+                        <strong>98%</strong>
+                        <span>Success Rate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">About Us</p>
+                <h2>Building Confident Learners and Responsible Citizens</h2>
+            </div>
+            <div class="about-grid">
+                <div class="card">
+                    <h3>Our Mission</h3>
+                    <p>To inspire young minds through quality education, ethical values, and practical learning experiences.</p>
+                </div>
+                <div class="card">
+                    <h3>Our Vision</h3>
+                    <p>To become a leading school known for excellence, innovation, and character development.</p>
+                </div>
+                <div class="card">
+                    <h3>Why Choose Us</h3>
+                    <p>Modern classrooms, dedicated faculty, strong discipline, and a safe, inclusive environment for all students.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="programs">
+            <div class="section-heading">
+                <p class="eyebrow">Programs</p>
+                <h2>Learning Opportunities for Every Child</h2>
+            </div>
+            <div class="program-grid">
+                <article class="program-card">
+                    <h3>Academic Excellence</h3>
+                    <p>Structured curriculum, regular assessments, and strong academic support for all grade levels.</p>
+                </article>
+                <article class="program-card">
+                    <h3>Sports & Wellness</h3>
+                    <p>Physical education, sports activities, and wellness programs that promote teamwork and fitness.</p>
+                </article>
+                <article class="program-card">
+                    <h3>Creative Arts</h3>
+                    <p>Music, art, drama, and cultural activities that encourage creativity and self-expression.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="achievements">
+            <div class="section-heading">
+                <p class="eyebrow">Achievements</p>
+                <h2>Recognized for Excellence and Growth</h2>
+            </div>
+            <div class="achievement-layout">
+                <ul class="achievement-list">
+                    <li>National-level academic excellence awards</li>
+                    <li>Outstanding performance in sports competitions</li>
+                    <li>Community service and leadership programs</li>
+                    <li>Modern digital learning initiatives</li>
+                </ul>
+                <div class="quote-box">
+                    <p>“Every child deserves a school that nurtures both their mind and their character.”</p>
+                    <span>— Principal, Bright Future School</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="contact">
+            <div class="section-heading">
+                <p class="eyebrow">Contact Us</p>
+                <h2>Let’s Start a Bright Learning Journey Together</h2>
+            </div>
+            <div class="contact-box">
+                <div>
+                    <h3>Visit Our Campus</h3>
+                    <p>123 Education Street, Kathmandu, Nepal</p>
+                    <p>Phone: +977-9800000000</p>
+                    <p>Email: admissions@brightfuture.edu.np</p>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    <textarea rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Bright Future School. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
