@@ -9,6 +9,8 @@ if (menuToggle && navLinks) {
     });
 }
 
+
+
 if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
 }
