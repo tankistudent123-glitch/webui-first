@@ -63,6 +63,36 @@ if (galleryTrack && galleryCards.length) {
     startGalleryTimer();
 }
 
+/* Header notification button behavior */
+const notifButton = document.querySelector('.notif-button');
+const notificationPanel = document.getElementById('notificationPanel');
+const notifClose = document.querySelector('.notification-close');
+
+const openNotifications = () => {
+    if (!notificationPanel) return;
+    notificationPanel.setAttribute('aria-hidden', 'false');
+    const dot = document.querySelector('.notif-dot'); if (dot) dot.style.display = 'none';
+};
+
+const closeNotifications = () => { if (!notificationPanel) return; notificationPanel.setAttribute('aria-hidden', 'true'); };
+
+if (notifButton) {
+    notifButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (!notificationPanel) return;
+        const hidden = notificationPanel.getAttribute('aria-hidden') === 'true';
+        if (hidden) openNotifications(); else closeNotifications();
+    });
+}
+
+if (notifClose) notifClose.addEventListener('click', (e) => { e.stopPropagation(); closeNotifications(); });
+
+document.addEventListener('click', (e) => {
+    if (!notificationPanel) return;
+    const target = e.target;
+    if (!notificationPanel.contains(target) && !notifButton.contains(target)) closeNotifications();
+});
+
 if (navbar) {
     window.addEventListener('scroll', () => {
         navbar.classList.toggle('scrolled', window.scrollY > 20);
