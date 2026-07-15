@@ -86,3 +86,50 @@ if (contactForm) {
         contactForm.reset();
     });
 }
+
+const loginTrigger = document.querySelector('.login-trigger');
+const loginModal = document.getElementById('loginModal');
+const loginForm = document.getElementById('loginForm');
+const modalClose = document.querySelector('.modal-close');
+
+const closeLoginModal = () => {
+    if (!loginModal) return;
+    loginModal.classList.add('hidden');
+    loginModal.setAttribute('aria-hidden', 'true');
+};
+
+const openLoginModal = () => {
+    if (!loginModal) return;
+    loginModal.classList.remove('hidden');
+    loginModal.setAttribute('aria-hidden', 'false');
+};
+
+if (loginTrigger && loginModal) {
+    loginTrigger.addEventListener('click', openLoginModal);
+}
+
+if (modalClose && loginModal) {
+    modalClose.addEventListener('click', closeLoginModal);
+}
+
+if (loginModal) {
+    loginModal.addEventListener('click', (event) => {
+        if (event.target === loginModal) {
+            closeLoginModal();
+        }
+    });
+}
+
+if (loginForm) {
+    loginForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const email = loginForm.email.value.trim();
+        if (!email) {
+            alert('Please enter your email.');
+            return;
+        }
+        alert(`Welcome back, ${email}!`);
+        loginForm.reset();
+        closeLoginModal();
+    });
+}
