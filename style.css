@@ -122,6 +122,24 @@ a {
 .brand-text {
     display: inline-block;
     white-space: nowrap;
+    overflow: hidden;
+    max-width: 250px;
+    vertical-align: middle;
+}
+
+.brand-text-slider {
+    display: inline-block;
+    padding-left: 100%;
+    animation: slideBrand 20s linear infinite;
+}
+
+@keyframes slideBrand {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .nav-links {
