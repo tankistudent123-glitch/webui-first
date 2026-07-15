@@ -3,58 +3,77 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bright Future School</title>
-    <meta name="description" content="A modern and professional school website for Bright Future School." />
+    <title>Everest English School</title>
+    <meta name="description" content="A refined and modern school homepage built with a professional academic design." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <header class="hero">
+    <header class="hero" id="home">
         <nav class="navbar">
-            <a href="#home" class="brand">Bright Future School</a>
+            <a href="#home" class="brand">
+                <span class="brand-mark">EES</span>
+                <span class="brand-text">Everest English School</span>
+            </a>
             <button class="menu-toggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#achievements">Achievements</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Explore</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#admissions">Admissions</a></li>
+                    </ul>
+                </li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
 
-        <div class="hero-content" id="home">
+        <div class="hero-content">
             <div class="hero-text">
-                <p class="eyebrow">Shaping Bright Minds for a Better Tomorrow</p>
-                <h1>Excellence in Education, Character, and Innovation.</h1>
-                <p class="hero-description">We provide a nurturing environment where students grow academically, socially, and creatively through modern learning and strong values.</p>
+                <p class="eyebrow">Excellence in Learning & Leadership</p>
+                <h1>Where academic ambition meets purpose-driven education.</h1>
+                <p class="hero-description">Everest English School offers a vibrant learning environment with inspiring academics, personal mentorship, and a values-centered educational experience.</p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Enroll Now</a>
-                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                    <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                    <a href="#programs" class="btn btn-secondary">Explore Programs</a>
                 </div>
-                <div class="stats">
+                <div class="hero-stats">
                     <div>
-                        <strong>1,200+</strong>
+                        <strong class="counter" data-target="4000">0</strong>
                         <span>Students</span>
                     </div>
                     <div>
-                        <strong>40+</strong>
-                        <span>Experienced Teachers</span>
+                        <strong class="counter" data-target="150">0</strong>
+                        <span>Faculty Experts</span>
                     </div>
                     <div>
-                        <strong>98%</strong>
-                        <span>Success Rate</span>
+                        <strong class="counter" data-target="95">0</strong>
+                        <span>Career Readiness</span>
                     </div>
                 </div>
             </div>
 
             <div class="hero-media">
-                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="School building and students" />
-                <div class="photo-badge">Modern campus • Safe learning environment</div>
+                <div class="media-card">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" alt="Students studying together on campus" />
+                    <div class="photo-badge">Modern campus • Supportive learning culture</div>
+                </div>
+                <div class="floating-card">
+                    <strong>24/7</strong>
+                    <span>Student support</span>
+                </div>
+                <div class="floating-card secondary">
+                    <strong>Global</strong>
+                    <span>Academic outlook</span>
+                </div>
             </div>
         </div>
     </header>
@@ -63,75 +82,148 @@
         <section class="section" id="about">
             <div class="section-heading">
                 <p class="eyebrow">About Us</p>
-                <h2>Building Confident Learners and Responsible Citizens</h2>
+                <h2>A future-ready college built on character, excellence, and purpose.</h2>
             </div>
             <div class="about-grid">
-                <div class="card">
+                <article class="info-card">
                     <h3>Our Mission</h3>
-                    <p>To inspire young minds through quality education, ethical values, and practical learning experiences.</p>
-                </div>
-                <div class="card">
+                    <p>To empower learners through quality education, strong ethics, and a culture of lifelong growth.</p>
+                </article>
+                <article class="info-card">
                     <h3>Our Vision</h3>
-                    <p>To become a leading school known for excellence, innovation, and character development.</p>
-                </div>
-                <div class="card">
+                    <p>To become a respected institution known for academic brilliance, innovation, and leadership development.</p>
+                </article>
+                <article class="info-card">
                     <h3>Why Choose Us</h3>
-                    <p>Modern classrooms, dedicated faculty, strong discipline, and a safe, inclusive environment for all students.</p>
-                </div>
+                    <p>Experienced mentors, modern infrastructure, lively campus life, and a supportive environment for every student.</p>
+                </article>
             </div>
         </section>
 
         <section class="section section-alt" id="programs">
             <div class="section-heading">
                 <p class="eyebrow">Programs</p>
-                <h2>Learning Opportunities for Every Child</h2>
+                <h2>Academic pathways designed for real-world success.</h2>
             </div>
             <div class="program-grid">
                 <article class="program-card">
-                    <h3>Academic Excellence</h3>
-                    <p>Structured curriculum, regular assessments, and strong academic support for all grade levels.</p>
+                    <h3>Business & Management</h3>
+                    <p>Develop leadership, entrepreneurship, and strategic thinking through modern academic training.</p>
                 </article>
                 <article class="program-card">
-                    <h3>Sports & Wellness</h3>
-                    <p>Physical education, sports activities, and wellness programs that promote teamwork and fitness.</p>
+                    <h3>Technology & Innovation</h3>
+                    <p>Explore digital tools, problem-solving, and emerging technologies in a hands-on environment.</p>
                 </article>
                 <article class="program-card">
-                    <h3>Creative Arts</h3>
-                    <p>Music, art, drama, and cultural activities that encourage creativity and self-expression.</p>
+                    <h3>Arts & Humanities</h3>
+                    <p>Build communication, creativity, and cultural understanding with a strong academic foundation.</p>
                 </article>
             </div>
         </section>
 
-        <section class="section" id="achievements">
-            <div class="section-heading">
-                <p class="eyebrow">Achievements</p>
-                <h2>Recognized for Excellence and Growth</h2>
-            </div>
-            <div class="achievement-layout">
-                <ul class="achievement-list">
-                    <li>National-level academic excellence awards</li>
-                    <li>Outstanding performance in sports competitions</li>
-                    <li>Community service and leadership programs</li>
-                    <li>Modern digital learning initiatives</li>
-                </ul>
-                <div class="quote-box">
-                    <p>“Every child deserves a school that nurtures both their mind and their character.”</p>
-                    <span>— Principal, Bright Future School</span>
+        <section class="section" id="admissions">
+            <div class="admissions-layout">
+                <div class="admissions-copy">
+                    <p class="eyebrow">Admissions</p>
+                    <h2>Begin your journey with a college that values both excellence and purpose.</h2>
+                    <p>Our admission process is simple, transparent, and student-friendly, helping applicants move forward with confidence.</p>
+                </div>
+                <div class="steps-card">
+                    <div class="step">
+                        <strong>01</strong>
+                        <span>Submit your application</span>
+                    </div>
+                    <div class="step">
+                        <strong>02</strong>
+                        <span>Complete document review</span>
+                    </div>
+                    <div class="step">
+                        <strong>03</strong>
+                        <span>Receive admission guidance</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section section-alt" id="contact">
+        <section class="section section-alt" id="gallery">
             <div class="section-heading">
-                <p class="eyebrow">Contact Us</p>
-                <h2>Let’s Start a Bright Learning Journey Together</h2>
+                <p class="eyebrow">Gallery</p>
+                <h2>A glimpse of campus life and learning excellence.</h2>
             </div>
+            <div class="campus-showcase">
+                <div class="campus-main">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" alt="Modern school building" />
+                    <div class="campus-overlay">
+                        <h3>Modern School Campus</h3>
+                        <p>Spacious classrooms, safe surroundings, and inspiring learning spaces.</p>
+                    </div>
+                </div>
+                <div class="campus-side">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80" alt="School classrooms" />
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=900&q=80" alt="School courtyard" />
+                </div>
+            </div>
+            <div class="gallery-grid">
+                <article class="gallery-card large">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Campus building and students" />
+                    <div class="gallery-overlay">
+                        <h3>Campus View</h3>
+                        <p>Modern spaces designed for focus and growth.</p>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=800&q=80" alt="Students in a classroom" />
+                    <div class="gallery-overlay">
+                        <h3>Classrooms</h3>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80" alt="Students collaborating" />
+                    <div class="gallery-overlay">
+                        <h3>Collaboration</h3>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" alt="Campus event" />
+                    <div class="gallery-overlay">
+                        <h3>Events</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="section-heading">
+                <p class="eyebrow">Student Success</p>
+                <h2>What learners experience at Everest Christian College.</h2>
+            </div>
+            <div class="testimonial-grid">
+                <article class="testimonial-card">
+                    <p>“The school gave me the confidence, mentors, and opportunities to grow into a stronger leader.”</p>
+                    <span>— Maya, Graduate</span>
+                </article>
+                <article class="testimonial-card">
+                    <p>“I loved the supportive environment and the balance between academics and real-world learning.”</p>
+                    <span>— Daniel, Student</span>
+                </article>
+                <article class="testimonial-card">
+                    <p>“The campus culture, faculty guidance, and practical learning shaped my future in a meaningful way.”</p>
+                    <span>— Sara, Alumni</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
             <div class="contact-box">
                 <div>
-                    <h3>Visit Our Campus</h3>
-                    <p>123 Education Street, Kathmandu, Nepal</p>
-                    <p>Phone: +977-9800000000</p>
-                    <p>Email: admissions@brightfuture.edu.np</p>
+                    <p class="eyebrow">Contact Us</p>
+                    <h2>Start your future with us today.</h2>
+                    <p>Visit our campus or connect with our admissions office for guidance and information.</p>
+                    <ul class="contact-list">
+                        <li>123 Academic Avenue, Kathmandu, Nepal</li>
+                        <li>+977-9800000000</li>
+                        <li>admissions@everestcollege.edu.np</li>
+                    </ul>
                 </div>
                 <form class="contact-form" id="contactForm">
                     <input type="text" placeholder="Your Name" required />
@@ -144,7 +236,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; <span id="year"></span> Bright Future School. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Everest English School. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

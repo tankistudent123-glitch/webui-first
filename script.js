@@ -2,14 +2,78 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const yearSpan = document.getElementById('year');
 const contactForm = document.getElementById('contactForm');
+const navbar = document.querySelector('.navbar');
+const counters = document.querySelectorAll('.counter');
+const dropdowns = document.querySelectorAll('.dropdown');
 
 if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('open');
+        menuToggle.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            menuToggle.classList.remove('active');
+        });
     });
 }
 
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+}
 
+dropdowns.forEach((dropdown) => {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    if (!toggle) return;
+
+    toggle.addEventListener('click', (event) => {
+        if (window.innerWidth <= 700) {
+            event.preventDefault();
+            dropdown.classList.toggle('open');
+        }
+    });
+});
+
+const animateCounters = () => {
+    counters.forEach((counter) => {
+        const target = Number(counter.dataset.target);
+        const suffix = counter.textContent.includes('+') ? '+' : counter.textContent.includes('%') ? '%' : '';
+        const duration = 1500;
+        const startTime = performance.now();
+
+        const updateCounter = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const value = Math.floor(progress * target);
+            counter.textContent = `${value}${suffix}`;
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = `${target}${suffix}`;
+            }
+        };
+
+        requestAnimationFrame(updateCounter);
+    });
+};
+
+if (counters.length) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(document.querySelector('.hero-stats'));
+}
 
 if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
