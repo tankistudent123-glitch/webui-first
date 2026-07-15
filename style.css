@@ -131,6 +131,7 @@ a {
     display: inline-block;
     padding-left: 100%;
     animation: slideBrand 20s linear infinite;
+    color: #ffeb3b;
 }
 
 @keyframes slideBrand {
@@ -253,7 +254,9 @@ a {
     padding-left: 100%;
     font-size: 0.95rem;
     font-weight: 600;
-    color: rgba(255,255,255,0.92);
+    background: linear-gradient(90deg, #ffdd55, #7fe7ff, #f7b84b);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 @keyframes slideText {
