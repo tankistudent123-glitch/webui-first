@@ -149,6 +149,42 @@ a {
     gap: 24px;
 }
 
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link-text {
+    display: inline-block;
+    animation: slideNav 8s linear infinite;
+}
+
+.nav-home .nav-link-text {
+    color: #f7b84b;
+}
+
+.nav-explore .nav-link-text {
+    color: #7fe7ff;
+}
+
+.nav-gallery .nav-link-text {
+    color: #ff9b76;
+}
+
+.nav-admissions .nav-link-text {
+    color: #adff7f;
+}
+
+.nav-contact .nav-link-text {
+    color: #d8b4ff;
+}
+
+@keyframes slideNav {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(8px); }
+    100% { transform: translateX(0); }
+}
+
 .nav-links a {
     color: var(--white);
     font-weight: 500;
