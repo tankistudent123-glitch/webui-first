@@ -215,6 +215,38 @@ a {
     max-width: 640px;
 }
 
+.hero-name-slider {
+    overflow: hidden;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.08);
+    margin: 16px 0 24px;
+}
+
+.slider-track {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: slideText 18s linear infinite;
+    padding: 12px 0;
+}
+
+.slider-track span {
+    display: inline-block;
+    padding-left: 100%;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.92);
+}
+
+@keyframes slideText {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 .eyebrow {
     display: inline-block;
     margin-bottom: 12px;
