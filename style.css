@@ -604,7 +604,7 @@ a {
 
 .step {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
     padding: 12px 0;
     border-bottom: 1px solid var(--border);
@@ -623,6 +623,40 @@ a {
     border-radius: 50%;
     background: var(--primary);
     color: var(--white);
+    flex-shrink: 0;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.step-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: #173867;
+}
+
+.step-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #2f6ef5;
+    color: #ffffff;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.step-content p {
+    margin: 0;
+    color: #4f617d;
+    font-size: 0.95rem;
 }
 
 .testimonial-card p {
